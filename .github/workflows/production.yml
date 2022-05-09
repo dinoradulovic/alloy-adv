@@ -25,6 +25,7 @@ jobs:
       - name: Build and Push the Image
         run: |
           cd ./app
+          npm install
           ./src/bin/building/build.sh
           TIMESTAMP=$(date +%s)
           docker build . -t ghcr.io/${{ github.repository }}-production:tmstp-$TIMESTAMP
