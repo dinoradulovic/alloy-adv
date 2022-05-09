@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "ENVIRONMENT: ", $(printenv)
+echo "ENVIRONMENT: " $(printenv)
 
 ./node_modules/.bin/sequelize db:create
 ./node_modules/.bin/sequelize db:migrate
